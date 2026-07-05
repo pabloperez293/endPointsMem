@@ -4,8 +4,17 @@ package com.example.productos_api.Model;
  * Representa un producto del sistema.
  * Esta clase sirve como modelo de datos para la API REST.
  */
-public class Producto {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "productos")
+public class Producto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     /** Identificador único del producto. */
     private Long id;
 
