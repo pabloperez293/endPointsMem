@@ -20,6 +20,9 @@ public class Producto {
     /** Precio del producto. */
     private double precio;
 
+    /** Categoria */
+    private String categoria;
+
     /**
      * Constructor vacío requerido para la deserialización JSON.
      */
@@ -32,11 +35,13 @@ public class Producto {
      * @param id     identificador del producto
      * @param nombre nombre del producto
      * @param precio precio del producto
+     * @param categoria categoria del producto
      */
-    public Producto(Long id, String nombre, double precio) {
+    public Producto(Long id, String nombre, double precio, String categoria) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
+        this.categoria = categoria;
     }
 
     public Long getId() {
@@ -61,5 +66,11 @@ public class Producto {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+    public String getCategoria() {
+        return categoria;
+    }
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 }
