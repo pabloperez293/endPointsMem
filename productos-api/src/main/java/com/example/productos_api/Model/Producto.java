@@ -67,6 +67,7 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+    // AGREGAMOS CATEGORIA
     public String getCategoria() {
         return categoria;
     }
