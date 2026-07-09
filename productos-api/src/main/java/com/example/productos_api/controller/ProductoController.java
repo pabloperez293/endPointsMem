@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 // inyectamos el repo
 import com.example.productos_api.repository.ProductoRepository;
@@ -42,6 +43,11 @@ public class ProductoController {
      * @param id identificador del producto
      * @return producto encontrado o null si no existe
      */
+    @GetMapping("/buscar")
+    public List<Producto> buscarPorNombre(@RequestParam String nombre) {
+        return productoRepository.findByNombre(nombre);
+    }
+
     @GetMapping("/{id}")
     public Producto obtenerProductoPorId(@PathVariable Long id) {
 

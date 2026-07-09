@@ -22,6 +22,8 @@ public class Producto {
 
     /** Categoria */
     private String categoria;
+// Description:
+    private String descripcion;
 
     /**
      * Constructor vacío requerido para la deserialización JSON.
@@ -73,5 +75,12 @@ public class Producto {
     }
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+    public String getDescripcion() {
+    return descripcion;
+}
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }
